@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
 
     ngOnInit() {
-
+debugger
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
         //this.lan = localStorage.getItem('selectedlang');

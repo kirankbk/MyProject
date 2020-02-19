@@ -31,6 +31,7 @@ import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-comp
 import { Injector, APP_INITIALIZER } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LOCATION_INITIALIZED } from '@angular/common';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { LOCATION_INITIALIZED } from '@angular/common';
     PolicyComponent,
     EmployeeprofileComponent,
     JobpostingadminComponent,
-    JobpostinguserComponent  
+    JobpostinguserComponent,
+    SidebarComponent  
 
   ],
   imports: [

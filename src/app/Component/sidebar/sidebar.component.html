@@ -1,0 +1,55 @@
+<form [style.display]="true ? 'inherit' : 'none'" #f="ngForm" novalidate class="form-signin" autocomplete="off"
+      >
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-sm-12">
+            <div [ngClass]="isMaximised?'box expanded expanded-padding':'box'">
+                <div class="box-header">
+                    <div class="box-name">
+                        <i id="spPageIcon" class="fa fa-credit-card"></i>
+                        <span>hi</span>
+                    </div>
+                    <div class="box-icons">
+
+                        <a title="Collapse/expand Panel" class="collapse-link">
+                            <i [ngClass]="''?'fa fa-chevron-down':'fa fa-chevron-up'"></i>
+                        </a>
+
+                        <a title="Full Screen View" class="expand-link">
+                            <i [ngClass]="isMaximised?'fa fa-compress':'fa fa-expand'" (click)="fullScreenClicked()"></i>
+                        </a>
+                        <a title="Close Panel" class="close-link" (click)="closePanel()">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                    <div class="no-move">
+                    </div>
+                </div>
+
+                <div class="box-content clearfix security-box-content">
+                    <div class="security-row" style="text-align:center;padding-top: 5px;">
+                        <span ID="lblErrorMesg" class="text-danger" style="font-weight:bold">{{errorMsg}}</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                          <span ID="Label1"> Please enter Password:</span>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">                         
+                          <input id="txtPWd" type="password" [(ngModel)]="txtPWd"
+                                 #txtPWdControl="ngModel" name="txtPWd" required
+                                 triggers="mouseenter:mouseleave" 
+                                 popoverTitle="Your Access Code" placement="bottom"                                   
+                                 [ngClass]="(f3.submitted  && txtPWdControl.invalid) ?'invalid':'' " />
+
+                      </div>
+                  </div>
+
+                  <div class="row panel-footer">
+                    <button class="btn NormalBtn" id="btnSubmitUpdateProfile" type="submit" [disabled]="isbtnUpdateDisabled">
+                        Submit
+                    </button>
+                </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</form>

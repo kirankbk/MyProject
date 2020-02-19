@@ -13,7 +13,7 @@ import { EmployeeprofileComponent } from './Component/employeeprofile/employeepr
 import { JobpostinguserComponent } from './Component/jobpostinguser/jobpostinguser.component';
 import { JobpostingadminComponent } from './Component/jobpostingadmin/jobpostingadmin.component';
 import { AuthGuard } from './guards/auth.guard';
-
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 const routes: Routes = [
    {
@@ -39,7 +39,8 @@ const routes: Routes = [
          {  path: 'policy',    component: PolicyComponent      },
         { path: 'EmployeeProfile', component: EmployeeprofileComponent      },
          {  path: 'jobpostinguser',      component:  JobpostinguserComponent      },
-         {  path: 'jobpostingadmin',      component:  JobpostingadminComponent   }
+         {  path: 'jobpostingadmin',      component:  JobpostingadminComponent   },
+         {  path: 'sidebaradmin',      component:  SidebarComponent   }
         
     ]
   },
